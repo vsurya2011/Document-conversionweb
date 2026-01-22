@@ -199,19 +199,19 @@
         const zipEl = document.getElementById('zip-icon-placeholder');
         if(zipEl) zipEl.innerHTML = icons.zip;
 
-       // Card Click Handler updated for GitHub Pages
-document.querySelectorAll('.converter-card').forEach(card => {
-    card.onclick = function() {
-        const type = this.getAttribute('data-type');
-        if (type === "LINK TO QR CODE") {
-            window.location.href = `qr-converter.html`;
-        } else if (type === "ANY TO ZIP") {
-            window.location.href = `upload.html?type=ZIP`;
-        } else {
-            window.location.href = `upload.html?type=${encodeURIComponent(type)}`;
-        }
-    };
-});
+        // Card Click Handler updated for Static Hosting (GitHub Pages)
+        document.querySelectorAll('.converter-card').forEach(card => {
+            card.onclick = function() {
+                const type = this.getAttribute('data-type');
+                if (type === "LINK TO QR CODE") {
+                    window.location.href = `qr-converter.html`;
+                } else if (type === "ANY TO ZIP") {
+                    window.location.href = `upload.html?type=ZIP`;
+                } else {
+                    window.location.href = `upload.html?type=${encodeURIComponent(type)}`;
+                }
+            };
+        });
     </script>
 
 </body>
